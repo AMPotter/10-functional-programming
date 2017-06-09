@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
     <!-- TODO: Setup a template for each row of the Author Stats section of this page: -->
+    <script id="admin-template"
+    type="text/x-handlebars-template">
+      <article class="clearfix" ="{{author}}"
+      data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <section id="blog-stats">
+            <dd class="{{}}"></dd>
+            <dd class="{{}}"></dd>
+            </script>
 
   </head>
   <body>
@@ -53,7 +63,7 @@
     <script>
       // TODO: After we fetch and load all the articles, what view function do we want to run next?
       // Let's pass in a callback function, to determine what happens AFTER all articles are loaded.
-      Article.fetchAll();
+      app.Article.fetchAll(app.articleView.initAdminPage);
     </script>
   </body>
 </html>
