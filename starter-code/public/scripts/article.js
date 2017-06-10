@@ -86,7 +86,6 @@ var app = app || {};
       // The first property should be pretty straightforward, but you will need to chain
       // some combination of filter, map, and reduce to get the value for the second
       // property.
-      console.log(author);
       return {
         name: author,
         wordCount: Article.all.filter(article => article.author === author).reduce((totalWords, current) => {
